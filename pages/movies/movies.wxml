@@ -1,0 +1,3 @@
+<!--pages/movies/movies.wxml-->
+<!-- 自定义组件+从服务器api接口读取数据 -->
+<movie-list />

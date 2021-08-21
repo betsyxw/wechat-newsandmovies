@@ -1,0 +1,13 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+    <!-- <image class="avatar" src="/images/avatar/1.png"></image> -->
+    <l-avatar class="l-avatar" open-data="{{['userAvatarUrl','userNickName']}}" placement="bottom" size="180"/>
+    <text class="motto">Hello,7月</text>
+    <view bind:tap="onTap" class="journey-container">
+        <!--button,不要用原生的button，-->
+        <text class="journey">开启小程序之旅</text>
+    </view>
+
+</view>
+
+<!--flex容器布局-->
