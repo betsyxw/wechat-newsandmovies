@@ -1,9 +1,10 @@
 // app.js
-App({
+App(
+  {
   onLaunch() {
     console.log("小程序启动！")
-    gIsPlayingMusic:false
-    gIsPlayingPostId: -1
+
+
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -16,7 +17,11 @@ App({
       }
     })
   },
+  gIsPlayingMusic:false,
+  gIsPlayingPostId: -1,
+  gBaseUrl:"http://t.talelin.com/v2/movie/",
   globalData: {
     userInfo: null
   }
-})
+}
+)

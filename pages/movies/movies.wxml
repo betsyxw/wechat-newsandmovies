@@ -1,3 +1,15 @@
 <!--pages/movies/movies.wxml-->
 <!-- 自定义组件+从服务器api接口读取数据 -->
-<movie-list />
+<l-search-bar bind:linconfirm="onConfirm" l-class="ex-search-bar" placeholder="请输入电影名称..."bind:lincancel="onSearchCancel"/>
+<view wx:if="{{!searchResult}}">
+<movie-list data-type="in_theaters" bind:tap="onGoToMore" movies="{{inTheaters}}" title="正在热映" f-class="movie-list" />
+<movie-list data-type="comming_soon"  bind:tap="onGoToMore" movies="{{comingSoon}}" title="即将上映" f-class="movie-list"/>
+<movie-list data-type="top250"  bind:tap="onGoToMore" movies="{{top250}}" title="豆瓣Top250" f-class="movie-list"/>
+</view>
+
+<view wx:else class="search-container">
+    <block wx:for="{{searchData}}" wx:key="index">
+        <movie class="movie" movie="{{item}}"/>
+    </block>
+</view>
+

@@ -1,1 +1,49 @@
 /* pages/movies/movies.wxss */
+
+.movie-list{
+    margin-bottom: 50rpx;
+
+}
+
+.ex-search-bar{
+    height: 90rpx !important;
+}
+
+page{
+    background-color: #f2f2f2;
+    /* background-color: teal; */
+}
+
+
+.search-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30rpx 30rpx;
+    justify-content: space-between;
+}
+
+.search-container::after{
+    content:'';
+    width: 200rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
