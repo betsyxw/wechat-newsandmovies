@@ -14,6 +14,29 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+function convertToCastString(casts){
+  var castsjoin = "";
+  for(var idx in casts){
+    castsjoin = castsjoin + casts[idx].name + "/"
+  }
+  return castsjoin.substring(0,castsjoin.length-2);
+}
+
+function converToCastInfos(casts){
+  var castsArray = []
+  for(var item in casts){
+    var cast = {
+      img: casts[item].avatars ? casts[item].avatars.large: "",
+    name: casts[item].name
+    }
+    castsArray.push(cast);
+  }
+  return castsArray;
+}
+
+
 module.exports = {
-  formatTime
+  formatTime,
+  convertToCastString,
+  converToCastInfos
 }

@@ -4,12 +4,11 @@
         "pages/posts/posts",
         "pages/post-detail/post-detail",
         "pages/movies/movies",
-        "pages/more-movie/more-movie"
+        "pages/more-movie/more-movie",
+        "pages/movie-detail/movie-detail"
     ],
     "window": {
-        "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#C22A1E",
-        "navigationBarTitleText": "Weixin",
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
@@ -35,7 +34,8 @@
     "sitemapLocation": "sitemap.json",
     "usingComponents": {
         "l-icon": "/miniprogram_npm/lin-ui/icon/index",
-        "movie":"/components/movie/index"
+        "movie": "/components/movie/index",
+        "l-rate": "/miniprogram_npm/lin-ui/rate/index"
     },
     "requiredBackgroundModes": [
         "audio",
